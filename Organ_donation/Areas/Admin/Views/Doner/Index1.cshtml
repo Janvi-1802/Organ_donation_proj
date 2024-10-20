@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Organ_donation.Models.Doner>
+
+<h2>Doners List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Organ</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var doner in Model)
+        {
+            <tr>
+                <td>@doner.Name</td>
+
+                <td>@doner.donateOrgan</td>
+            </tr>
+        }
+    </tbody>
+</table>

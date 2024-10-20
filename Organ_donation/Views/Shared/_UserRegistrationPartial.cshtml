@@ -1,0 +1,95 @@
+﻿
+@model Organ_donation.Models.RegistrationModel
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-user mr-2 text-info"></i>Register</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div id="alert_placeholder_register">
+            </div>
+            <form id="UserRegistrationForm" name="UserRegistrationForm" asp-controller="UserAuth" asp-action="RegisterUser">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="RegistrationInValid">
+                <div class="form-group row">
+                    <label asp-for="Email" class="col-md-4 col-form-label"></label>
+                    <div class="col-md-8">
+                        <input asp-for="Email" placeholder="Email Address" class="form-control" id="Email_1">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Password" class="col-md-4 col-form-label"></label>
+                    <div class="col-md-8">
+                        <input asp-for="Password" placeholder="Password" class="form-control" id="Password_1">
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="ConfirmPassword" class="col-md-4 col-form-label"></label>
+                    <div class="col-md-8">
+                        <input asp-for="ConfirmPassword" placeholder="Confirm Password" class="form-control" id="ConfirmPassword_1">
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="firstName" class="col-md-4 col-form-label"></label>
+                    <div class="col-md-8">
+                        <input asp-for="firstName" placeholder="First Name" class="form-control" id="firstName_1">
+                        <span asp-validation-for="firstName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="lastName" class="col-md-4 col-form-label"></label>
+                    <div class="col-md-8">
+                        <input asp-for="lastName" placeholder="Last Name" class="form-control" id="lastName_1">
+                        <span asp-validation-for="lastName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="City" class="col-md-4 col-form-label"></label>
+                    <div class="col-md-8">
+                        <input asp-for="City" placeholder="City" class="form-control" id="City_1">
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="country" class="col-md-4 col-form-label"></label>
+                    <div class="col-md-8">
+                        <input asp-for="country" placeholder="Country" class="form-control" id="country_1">
+                        <span asp-validation-for="country" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="address" class="col-md-4 col-form-label"></label>
+                    <div class="col-md-8">
+                        <input asp-for="address" placeholder="Address" class="form-control" id="address_1">
+                        <span asp-validation-for="address" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Phone" class="col-md-4 col-form-label"></label>
+                    <div class="col-md-8">
+                        <input asp-for="Phone" placeholder="Phone Number" class="form-control" id="Phone_1">
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <div class="form-check">
+                            <input asp-for="AcceptUserAgreement" class="form-check-input" id="AcceptUserAgreement_1">
+                            <label asp-for="AcceptUserAgreement" class="form-check-label">I accept the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button id="register" name="register" type="button" class="btn btn-primary">Register</button>
+        </div>
+    </div>
+</div>

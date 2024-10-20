@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Organ_donation.Models.DonerViewModel>
+
+<h2>Available Doners of organ @ViewBag.organ</h2>
+
+<table class="table text-white">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Phone Number</th>
+            <th>DOB</th>
+            <th>Organ</th>
+            <th>BloodType</th>
+            <th>Match</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var doner in Model)
+        {
+            <tr>
+                <td>@doner.Name</td>
+                <td>@doner.Age</td>
+                <td>@doner.Gender</td>
+                <td>@doner.PhoneNumber</td>
+                <td>@doner.DOB</td>
+                <td>@doner.Organ</td>
+                <td>@doner.BloodType</td>
+                <td>
+                    <input type="checkbox" disabled="disabled" @(doner.IsMatch ? "checked" : "") />
+                </td>
+               
+            </tr>
+        }
+    </tbody>
+</table>
+
+
